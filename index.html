@@ -1,1 +1,93 @@
-<h1>nimisha mamtani</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM University Sonipat</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .image {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SRM University Sonipat</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="gallery">
+        <!-- Images will be displayed here -->
+    </div>
+
+    <script>
+        // Array of image URLs for the gallery
+        const imageUrls = [
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/300"
+        ];
+
+        // Function to display images in the gallery
+        function displayImages() {
+            const gallery = document.getElementById('gallery');
+            imageUrls.forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = "Image";
+                img.classList.add('image');
+                gallery.appendChild(img);
+            });
+        }
+
+        // Call the displayImages function when the page loads
+        window.onload = displayImages;
+    </script>
+</body>
+</html>
+
