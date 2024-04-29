@@ -3,45 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRM University Sonipat, Delhi ncr</title>
+    <title>SRM University Sonipat</title>
     <style>
-        /* Basic styling */
+        /* CSS Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
         }
         header {
-            background-color: #333;
+            background-color: #1e90ff;
             color: #fff;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #f4f4f4;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
             padding: 10px;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #1e90ff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e90ff;
             text-align: center;
         }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
+        p {
+            line-height: 1.6;
         }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        #gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .image {
-            margin: 10px;
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -50,44 +65,41 @@
         <h1>SRM University Sonipat</h1>
     </header>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">Admissions</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <div id="gallery">
-        <!-- Images will be displayed here -->
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to SRM University Sonipat, a leading institution committed to providing quality education and fostering innovation.</p>
+            <p>Our state-of-the-art campus and experienced faculty ensure holistic development and success for our students.</p>
+        </section>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <p>Explore our wide range of undergraduate and postgraduate programs designed to meet the demands of today's industries.</p>
+            <ul>
+                <li>Bachelor of Technology (B.Tech)</li>
+                <li>Bachelor of Business Administration (BBA)</li>
+                <li>Master of Computer Applications (MCA)</li>
+                <li>Master of Business Administration (MBA)</li>
+            </ul>
+        </section>
+        <section id="admissions">
+            <h2>Admissions</h2>
+            <p>Learn about our admission process, eligibility criteria, and important dates for the upcoming academic year.</p>
+            <p>For more details, visit our admissions page.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or need assistance? Contact our support team for help.</p>
+            <p>Email: info@srmsonipat.ac.in</p>
+            <p>Phone: +91 1234567890</p>
+        </section>
     </div>
-
-    <script>
-        // Array of image URLs for the gallery
-        const imageUrls = [
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300",
-            "https://via.placeholder.com/300"
-        ];
-
-        // Function to display images in the gallery
-        function displayImages() {
-            const gallery = document.getElementById('gallery');
-            imageUrls.forEach(url => {
-                const img = document.createElement('img');
-                img.src = url;
-                img.alt = "Image";
-                img.classList.add('image');
-                gallery.appendChild(img);
-            });
-        }
-
-        // Call the displayImages function when the page loads
-        window.onload = displayImages;
-    </script>
+    <footer>
+        &copy; 2024 SRM University Sonipat. All rights reserved.
+    </footer>
 </body>
 </html>
-
