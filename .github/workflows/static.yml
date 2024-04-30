@@ -12,11 +12,12 @@ jobs:
 
     steps:
     -name: Checkout repository
-    uses:actions/checkout@v2
+     uses: actions/checkout@v2
 
-    -name:Set up python
-    uses:actions/setup-python@v2
-    with:
-      python-version: "3.12" #use the python version you need
+    -name: Set up python
+     uses: actions/setup-python@v2
+     with:
+       python-version: "3.12" #use the python version you need
 
-    -name: Run 
+    -name: Run testingcode.py
+     run: python testingcode.py
