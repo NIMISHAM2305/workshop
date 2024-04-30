@@ -1,4 +1,4 @@
-name: Python Script Workflow
+name: Upload QR Code
 
 on:
   push:
@@ -6,21 +6,22 @@ on:
       - main
 
 jobs:
-  run_python_script:
-    name: Run hello.py
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.12' # Use the Python version you need
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-    - name: Run justtestingcode.py
-      run: python justtestingcode.py
+      - name: Install dependencies
+        run: pip install qrcode[pil] PyGithub
+
+      - name: Generate and upload QR code
+        run: python generate_qr_code.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
