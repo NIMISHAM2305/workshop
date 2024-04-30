@@ -15,7 +15,7 @@ def generate_qr_code(data, filename):
 
 if __name__ == "__main__":
     # Example data for QR code
-    data = "Gurmeet Singh"
+    data = "Nimisha mamtani"
 
     # Generate QR code image
     generate_qr_code(data, "qrcode.png")
